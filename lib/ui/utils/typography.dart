@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 
 TextTheme textTheme(Color color, bool isPlatformAndroid) => TextTheme(
       bodyText2: isPlatformAndroid ? androidBody2(color) : iOSBody(color),
+      headline1: androidHeadline1(),
+      headline5: androidHeadline5(color),
       headline6:
           isPlatformAndroid ? androidHeadline6(color) : iOSHeadline(color),
-      headline5: androidHeadline5(color),
       caption: isPlatformAndroid ? androidCaption(color) : iOSCaption1(color),
       overline: androidOverline(color),
     );
@@ -15,12 +16,12 @@ const String fontName = "Quicksand";
 
 // --- 1. TextStyle | Android
 
-TextStyle androidHeadline6(Color color) => TextStyle(
+TextStyle androidHeadline1() => TextStyle(
       fontFamily: fontName,
-      fontWeight: FontWeight.w500,
-      letterSpacing: 0.15,
-      fontSize: 20,
-      color: color,
+      fontWeight: FontWeight.w700,
+      letterSpacing: 0,
+      fontSize: 45,
+      color: Colors.white,
     );
 
 TextStyle androidHeadline5(Color color) => TextStyle(
@@ -28,6 +29,14 @@ TextStyle androidHeadline5(Color color) => TextStyle(
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
       fontSize: 24,
+      color: color,
+    );
+
+TextStyle androidHeadline6(Color color) => TextStyle(
+      fontFamily: fontName,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.15,
+      fontSize: 20,
       color: color,
     );
 
