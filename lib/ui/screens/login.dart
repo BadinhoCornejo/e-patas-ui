@@ -9,46 +9,83 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(child: Logo(), flex: 1),
-          Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  MainInput(hintText: 'someuser@gmail.com', isPassword: false),
-                  SizedBox(height: 40.0),
-                  MainInput(hintText: 'Contraseña', isPassword: true)
-                ],
-              )),
-          Expanded(
-            flex: 1,
-            child: Column(
+      body: Container(
+        child: ListView(
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                MainButton(isWhite: true, text: "INGRESAR", onPressed: () {}),
-                SizedBox(height: 30.0),
-                TextButton.icon(
-                  onPressed: () {},
-                  icon: Icon(App.akar_icons_arrow_back, color: Colors.white),
-                  label: Text('Regresar',
-                      style: TextStyle(
-                        fontFamily: 'Quicksand',
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .22,
-                        fontSize: 17,
-                        color: Colors.white,
-                      )),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    30.0,
+                    80.0,
+                    30.0,
+                    80.0,
+                  ),
+                  child: Logo(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 50.0,
+                    bottom: 50.0,
+                  ),
+                  child: Column(
+                    children: [
+                      MainInput(
+                        hintText: 'someuser@gmail.com',
+                        isPassword: false,
+                      ),
+                      SizedBox(height: 30.0),
+                      MainInput(
+                        hintText: 'Contraseña',
+                        isPassword: true,
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 50.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      MainButton(
+                        isWhite: true,
+                        text: "INGRESAR",
+                        onPressed: () {},
+                      ),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      TextButton.icon(
+                        onPressed: () {},
+                        icon: Icon(
+                          App.akar_icons_arrow_back,
+                          color: Colors.white,
+                        ),
+                        label: Text(
+                          'Regresar',
+                          style: TextStyle(
+                            fontFamily: 'Quicksand',
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: .22,
+                            fontSize: 17,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
-            ),
-          )
-        ],
+            )
+          ],
+        ),
+        decoration: BoxDecoration(
+          gradient: primaryColorGradient,
+        ),
       ),
-      decoration: BoxDecoration(gradient: primaryColorGradient),
-    ));
+    );
   }
 }
