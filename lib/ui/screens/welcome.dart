@@ -1,5 +1,6 @@
 import 'package:e_patas/ui/components/logo.dart';
 import 'package:e_patas/ui/components/main_button.dart';
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -36,7 +37,7 @@ class Welcome extends StatelessWidget {
           )
         ],
       ),
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(gradient: primaryColorGradient),
     ));
   }
 }

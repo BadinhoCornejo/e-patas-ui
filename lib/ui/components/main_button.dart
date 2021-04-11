@@ -23,15 +23,16 @@ class MainButton extends StatelessWidget {
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0))),
             minimumSize: MaterialStateProperty.all<Size>(Size(347.0, 49.0))),
-        child: Text(text,
-            style: isWhite
-                ? TextStyle(
+        child: isWhite
+            ? Text(text,
+                style: TextStyle(
                     fontFamily: "Quicksand",
                     fontSize: 17,
                     letterSpacing: .22,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF43B692))
-                : TextStyle(
+                    color: Color(0xFF43B692)))
+            : Text(text,
+                style: TextStyle(
                     fontFamily: "Quicksand",
                     fontSize: 17,
                     letterSpacing: .22,

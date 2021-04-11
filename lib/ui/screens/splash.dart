@@ -1,4 +1,5 @@
 import 'package:e_patas/ui/components/logo.dart';
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -9,7 +10,7 @@ class Splash extends StatelessWidget {
       child: Center(
         child: Logo(),
       ),
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(gradient: primaryColorGradient),
     ));
   }
 }

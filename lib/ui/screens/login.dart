@@ -2,6 +2,7 @@ import 'package:e_patas/ui/components/logo.dart';
 import 'package:e_patas/ui/components/main_button.dart';
 import 'package:e_patas/ui/components/main_input.dart';
 import 'package:e_patas/ui/utils/app_icons.dart';
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -47,7 +48,7 @@ class Login extends StatelessWidget {
           )
         ],
       ),
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(gradient: primaryColorGradient),
     ));
   }
 }
