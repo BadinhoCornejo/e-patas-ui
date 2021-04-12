@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+
 import 'package:e_patas/ui/components/logo.dart';
 import 'package:e_patas/ui/components/main_button.dart';
 import 'package:e_patas/ui/components/main_input.dart';
-import 'package:e_patas/ui/utils/app_icons.dart';
 import 'package:e_patas/ui/utils/color_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:e_patas/ui/utils/dogemate_icons.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -61,8 +62,9 @@ class Login extends StatelessWidget {
                       TextButton.icon(
                         onPressed: () {},
                         icon: Icon(
-                          App.akar_icons_arrow_back,
+                          Dogemate.arrow_back_generic,
                           color: Colors.white,
+                          size: 16,
                         ),
                         label: Text(
                           'Regresar',

@@ -1,20 +1,26 @@
+import 'package:flutter/material.dart';
+
 import 'package:e_patas/ui/components/main_button.dart';
 import 'package:e_patas/ui/components/register_section_title.dart';
 import 'package:e_patas/ui/components/secondary_button.dart';
 import 'package:e_patas/ui/components/secondary_input.dart';
 import 'package:e_patas/ui/components/text_box_input.dart';
 import 'package:e_patas/ui/components/title_icon.dart';
-import 'package:e_patas/ui/utils/app_icons.dart';
 import 'package:e_patas/ui/utils/color_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:e_patas/ui/utils/dogemate_icons.dart';
 
 class UserRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
+          physics: MediaQuery.of(context).viewInsets.bottom != 0
+              ? NeverScrollableScrollPhysics()
+              : AlwaysScrollableScrollPhysics(),
           child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
@@ -32,7 +38,7 @@ class UserRegister extends StatelessWidget {
                     width: 150.0,
                     height: 150.0,
                     child: Icon(
-                      App.akar_icons_camera,
+                      Dogemate.image,
                       color: Colors.grey,
                       size: 42.0,
                     ),
@@ -52,18 +58,17 @@ class UserRegister extends StatelessWidget {
                         width: 35.0,
                         height: 35.0,
                         child: Icon(
-                          Icons.add,
+                          Dogemate.plus,
                           color: primaryColor,
-                          size: 24.0,
+                          size: 20,
                         ),
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.8),
-                              spreadRadius: 2.0,
-                              blurRadius: 2,
+                              color: Color(0xFF9AAACF).withOpacity(0.15),
+                              blurRadius: 24,
                               offset:
-                                  Offset(0, 1), // changes position of shadow
+                                  Offset(0, 8), // changes position of shadow
                             ),
                           ],
                           color: Colors.white,
@@ -99,8 +104,10 @@ class UserRegister extends StatelessWidget {
               ),
               SizedBox(height: 35.0),
               MainButton(
-                  isWhite: false, text: 'CREAR PERFIL', onPressed: () {}),
-              SizedBox(height: 25.0),
+                isWhite: false,
+                text: 'CREAR PERFIL',
+                onPressed: () {},
+              ),
             ],
           ),
         ),

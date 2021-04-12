@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'package:e_patas/ui/components/main_button.dart';
 import 'package:e_patas/ui/components/number_input.dart';
 import 'package:e_patas/ui/components/register_section_title.dart';
@@ -5,9 +7,8 @@ import 'package:e_patas/ui/components/secondary_button.dart';
 import 'package:e_patas/ui/components/secondary_input.dart';
 import 'package:e_patas/ui/components/text_box_input.dart';
 import 'package:e_patas/ui/components/title_icon.dart';
-import 'package:e_patas/ui/utils/app_icons.dart';
 import 'package:e_patas/ui/utils/color_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:e_patas/ui/utils/dogemate_icons.dart';
 
 class PetRegister extends StatelessWidget {
   @override
@@ -33,7 +34,7 @@ class PetRegister extends StatelessWidget {
                     width: 150.0,
                     height: 150.0,
                     child: Icon(
-                      App.akar_icons_camera,
+                      Dogemate.image,
                       color: Colors.grey,
                       size: 42.0,
                     ),
