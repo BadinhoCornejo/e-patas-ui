@@ -22,7 +22,9 @@ class PetRegister extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
                 child: TitleIcon(
                   title: 'Mi mascota',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                 ),
               ),
               SizedBox(

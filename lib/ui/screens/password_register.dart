@@ -12,8 +12,18 @@ class PasswordRegister extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
-              child: TitleIcon(title: 'Contraseña', onPressed: () {}),
+              padding: const EdgeInsets.fromLTRB(
+                25.0,
+                32.0,
+                0.0,
+                0.0,
+              ),
+              child: TitleIcon(
+                title: 'Contraseña',
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(54.0),
@@ -26,7 +36,12 @@ class PasswordRegister extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(33.0),
               child: MainButton(
-                  isWhite: false, text: 'CREAR CONTRASEÑA', onPressed: () {}),
+                isWhite: false,
+                text: 'CREAR CONTRASEÑA',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/user_register');
+                },
+              ),
             )
           ],
         ),

@@ -26,7 +26,9 @@ class UserRegister extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
                 child: TitleIcon(
                   title: 'Mi perfil',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                 ),
               ),
               SizedBox(
@@ -106,7 +108,9 @@ class UserRegister extends StatelessWidget {
               MainButton(
                 isWhite: false,
                 text: 'CREAR PERFIL',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pet_register');
+                },
               ),
             ],
           ),

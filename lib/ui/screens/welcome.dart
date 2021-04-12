@@ -19,10 +19,16 @@ class Welcome extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 MainButton(
-                    isWhite: true, text: "INICIAR SESIÓN", onPressed: () {}),
+                    isWhite: true,
+                    text: "INICIAR SESIÓN",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    }),
                 SizedBox(height: 30.0),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/email_register');
+                  },
                   child: Text('¿No tienes una cuenta? Regístrate',
                       style: TextStyle(
                         fontFamily: 'Quicksand',
