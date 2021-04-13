@@ -27,79 +27,80 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          decoration: BoxDecoration(gradient: primaryColorGradient),
-          child: CustomScrollView(
-            physics: NeverScrollableScrollPhysics(),
-            slivers: [
-              SliverFillRemaining(
-                hasScrollBody: false,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 2,
-                      child: Logo(),
+        decoration: BoxDecoration(gradient: primaryColorGradient),
+        child: CustomScrollView(
+          physics: NeverScrollableScrollPhysics(),
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 2,
+                    child: Logo(),
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        MainInput(
+                          controller: emailController,
+                          hintText: 'someuser@gmail.com',
+                          isPassword: false,
+                        ),
+                        SizedBox(height: 30.0),
+                        MainInput(
+                          controller: passwordController,
+                          hintText: 'Contraseña',
+                          isPassword: true,
+                        )
+                      ],
                     ),
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 1,
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 38),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          MainInput(
-                            controller: emailController,
-                            hintText: 'someuser@gmail.com',
-                            isPassword: false,
+                          MainButton(
+                            isWhite: true,
+                            text: "INGRESAR",
+                            onPressed: () {},
                           ),
-                          SizedBox(height: 30.0),
-                          MainInput(
-                            controller: passwordController,
-                            hintText: 'Contraseña',
-                            isPassword: true,
-                          )
+                          SizedBox(
+                            height: 30.0,
+                          ),
+                          TextButton.icon(
+                            onPressed: () {},
+                            icon: Icon(
+                              Dogemate.arrow_back_generic,
+                              color: backgroundColor,
+                              size: 16,
+                            ),
+                            label: Text(
+                              'Regresar',
+                              style: iOSBody(backgroundColor),
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    Flexible(
-                      fit: FlexFit.tight,
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 38),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            MainButton(
-                              isWhite: true,
-                              text: "INGRESAR",
-                              onPressed: () {},
-                            ),
-                            SizedBox(
-                              height: 30.0,
-                            ),
-                            TextButton.icon(
-                              onPressed: () {},
-                              icon: Icon(
-                                Dogemate.arrow_back_generic,
-                                color: backgroundColor,
-                                size: 16,
-                              ),
-                              label: Text(
-                                'Regresar',
-                                style: iOSBody(backgroundColor),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          )),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

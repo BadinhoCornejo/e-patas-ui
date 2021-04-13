@@ -21,7 +21,9 @@ class EmailRegister extends StatelessWidget {
               ),
               child: TitleIcon(
                 title: 'Nueva cuenta',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ),
             Padding(
@@ -40,7 +42,9 @@ class EmailRegister extends StatelessWidget {
               child: MainButton(
                 isWhite: false,
                 text: 'AGREGAR EMAIL',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/password_register');
+                },
               ),
             )
           ],

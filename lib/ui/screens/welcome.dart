@@ -31,11 +31,15 @@ class Welcome extends StatelessWidget {
                   MainButton(
                     isWhite: true,
                     text: "INICIAR SESIÓN",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
                   ),
                   SizedBox(height: 30.0),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/email_register');
+                    },
                     child: Text(
                       '¿No tienes una cuenta? Regístrate',
                       style: iOSBody(backgroundColor),

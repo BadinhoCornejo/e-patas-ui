@@ -29,7 +29,9 @@ class PetRegister extends StatelessWidget {
                 ),
                 child: TitleIcon(
                   title: 'Mi mascota',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                 ),
               ),
               SizedBox(

@@ -21,7 +21,9 @@ class PasswordRegister extends StatelessWidget {
               ),
               child: TitleIcon(
                 title: 'Contraseña',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ),
             Padding(
@@ -40,7 +42,9 @@ class PasswordRegister extends StatelessWidget {
               child: MainButton(
                 isWhite: false,
                 text: 'CREAR CONTRASEÑA',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/user_register');
+                },
               ),
             )
           ],
