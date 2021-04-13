@@ -16,14 +16,16 @@ class UserRegister extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
-          physics: MediaQuery.of(context).viewInsets.bottom != 0
-              ? NeverScrollableScrollPhysics()
-              : AlwaysScrollableScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(
+                  30.0,
+                  62.0,
+                  0.0,
+                  0.0,
+                ),
                 child: TitleIcon(
                   title: 'Mi perfil',
                   onPressed: () {},
@@ -83,7 +85,12 @@ class UserRegister extends StatelessWidget {
                 height: 25.0,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(54.0, 0.0, 54.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(
+                  54.0,
+                  0.0,
+                  54.0,
+                  0.0,
+                ),
                 child: SecondaryInput(
                   hintText: 'Mi nombre',
                   isPassword: false,
@@ -108,10 +115,11 @@ class UserRegister extends StatelessWidget {
                 text: 'CREAR PERFIL',
                 onPressed: () {},
               ),
+              SizedBox(height: 38.0),
             ],
           ),
         ),
-        color: Color(0xFFF4FBF9),
+        color: backgroundColor,
       ),
     );
   }

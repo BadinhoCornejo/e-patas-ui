@@ -15,11 +15,18 @@ class PetRegister extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
           child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(
+                  30.0,
+                  62.0,
+                  0.0,
+                  0.0,
+                ),
                 child: TitleIcon(
                   title: 'Mi mascota',
                   onPressed: () {},
@@ -35,8 +42,8 @@ class PetRegister extends StatelessWidget {
                     height: 150.0,
                     child: Icon(
                       Dogemate.image,
-                      color: Colors.grey,
-                      size: 42.0,
+                      color: neutralColor,
+                      size: 50.0,
                     ),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -61,14 +68,13 @@ class PetRegister extends StatelessWidget {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.8),
-                              spreadRadius: 2.0,
-                              blurRadius: 2,
+                              color: Color(0xFF9AAACF).withOpacity(0.15),
+                              blurRadius: 24,
                               offset:
-                                  Offset(0, 1), // changes position of shadow
+                                  Offset(0, 8), // changes position of shadow
                             ),
                           ],
-                          color: Colors.white,
+                          color: backgroundColor,
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -80,7 +86,12 @@ class PetRegister extends StatelessWidget {
                 height: 25.0,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(54.0, 0.0, 54.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(
+                  54.0,
+                  0.0,
+                  54.0,
+                  0.0,
+                ),
                 child: SecondaryInput(
                   hintText: '¿Cuál es su nombre?',
                   isPassword: false,
@@ -102,11 +113,11 @@ class PetRegister extends StatelessWidget {
                 text: 'AGREGAR MASCOTA',
                 onPressed: () {},
               ),
-              SizedBox(height: 25.0),
+              SizedBox(height: 38.0),
             ],
           ),
         ),
-        color: Color(0xFFF4FBF9),
+        color: backgroundColor,
       ),
     );
   }

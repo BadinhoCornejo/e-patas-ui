@@ -1,3 +1,5 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
+import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
 class RegisterSectionTitle extends StatelessWidget {
@@ -20,10 +22,10 @@ class RegisterSectionTitle extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-              fontFamily: 'Quicksand',
+              fontFamily: fontName,
               fontSize: 17.0,
               fontWeight: FontWeight.w500,
-              color: Colors.black,
+              color: textColor,
               letterSpacing: .22,
             ),
           ),

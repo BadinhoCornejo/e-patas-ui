@@ -1,3 +1,5 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
+import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
 class NumberInput extends StatelessWidget {
@@ -17,12 +19,7 @@ class NumberInput extends StatelessWidget {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             hintText: text,
-            hintStyle: TextStyle(
-              fontFamily: 'Quicksand',
-              fontWeight: FontWeight.w300,
-              fontSize: 16.0,
-              color: Colors.black.withOpacity(0.4),
-            ),
+            hintStyle: iOSBody(neutralColor),
             border: UnderlineInputBorder(
               borderSide: BorderSide.none,
             ),

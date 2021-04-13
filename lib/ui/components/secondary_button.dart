@@ -1,3 +1,5 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
+import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
 class SecondaryButton extends StatelessWidget {
@@ -23,12 +25,7 @@ class SecondaryButton extends StatelessWidget {
             children: [
               Text(
                 text,
-                style: TextStyle(
-                  fontFamily: 'Quicksand',
-                  fontWeight: FontWeight.w300,
-                  fontSize: 16.0,
-                  color: Colors.black.withOpacity(0.4),
-                ),
+                style: iOSBody(neutralColor),
               ),
               Icon(
                 Icons.navigate_next_rounded,

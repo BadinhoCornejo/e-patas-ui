@@ -6,11 +6,12 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      child: Center(
-        child: Logo(),
+      body: Container(
+        child: Center(
+          child: Logo(),
+        ),
+        decoration: BoxDecoration(gradient: primaryColorGradient),
       ),
-      decoration: BoxDecoration(gradient: primaryColorGradient),
-    ));
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +10,12 @@ class SecondaryInput extends StatelessWidget {
   static UnderlineInputBorder border = UnderlineInputBorder(
       borderSide: BorderSide(color: Colors.grey, width: 2.0));
 
-  const SecondaryInput(
-      {Key? key,
-      required this.hintText,
-      required this.isPassword,
-      required this.isCentered})
-      : super(key: key);
+  const SecondaryInput({
+    Key? key,
+    required this.hintText,
+    required this.isPassword,
+    required this.isCentered,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class SecondaryInput extends StatelessWidget {
       obscureText: isPassword,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: iOSTitle2(Color(0xFF0E251E)),
+        hintStyle: iOSTitle2(textColor),
         enabledBorder: border,
         border: border,
         focusedBorder: border,

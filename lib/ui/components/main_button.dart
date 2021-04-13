@@ -1,3 +1,5 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
+import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
 class MainButton extends StatelessWidget {
@@ -5,38 +7,42 @@ class MainButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
 
-  const MainButton(
-      {Key? key,
-      required this.isWhite,
-      required this.text,
-      required this.onPressed})
-      : super(key: key);
+  const MainButton({
+    Key? key,
+    required this.isWhite,
+    required this.text,
+    required this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: onPressed,
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(
-                isWhite ? Color(0xFFF4FBF9) : Color(0xFF43B692)),
-            shape: MaterialStateProperty.all<OutlinedBorder>(
-                RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0))),
-            minimumSize: MaterialStateProperty.all<Size>(Size(347.0, 49.0))),
-        child: isWhite
-            ? Text(text,
-                style: TextStyle(
-                    fontFamily: "Quicksand",
-                    fontSize: 17,
-                    letterSpacing: .22,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xFF43B692)))
-            : Text(text,
-                style: TextStyle(
-                    fontFamily: "Quicksand",
-                    fontSize: 17,
-                    letterSpacing: .22,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white)));
+      onPressed: onPressed,
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color>(
+          isWhite ? backgroundColor : primaryColor,
+        ),
+        shape: MaterialStateProperty.all<OutlinedBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50.0),
+          ),
+        ),
+        minimumSize: MaterialStateProperty.all<Size>(
+          Size(MediaQuery.of(context).size.width - 68, 49.0),
+        ),
+        shadowColor: MaterialStateProperty.all<Color>(
+          primaryColor.withOpacity(0.15),
+        ),
+      ),
+      child: isWhite
+          ? Text(
+              text,
+              style: iOSBody(primaryColor),
+            )
+          : Text(
+              text,
+              style: iOSBody(backgroundColor),
+            ),
+    );
   }
 }

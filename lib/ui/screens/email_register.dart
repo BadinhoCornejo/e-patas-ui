@@ -1,6 +1,7 @@
 import 'package:e_patas/ui/components/main_button.dart';
 import 'package:e_patas/ui/components/secondary_input.dart';
 import 'package:e_patas/ui/components/title_icon.dart';
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:flutter/material.dart';
 
 class EmailRegister extends StatelessWidget {
@@ -12,11 +13,19 @@ class EmailRegister extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(25.0, 32.0, 0.0, 0.0),
-              child: TitleIcon(title: 'Nueva cuenta', onPressed: () {}),
+              padding: const EdgeInsets.fromLTRB(
+                30.0,
+                62.0,
+                0.0,
+                0.0,
+              ),
+              child: TitleIcon(
+                title: 'Nueva cuenta',
+                onPressed: () {},
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.all(54.0),
+              padding: const EdgeInsets.symmetric(horizontal: 53.0),
               child: SecondaryInput(
                 hintText: 'Mi correo electrónico',
                 isPassword: false,
@@ -24,13 +33,19 @@ class EmailRegister extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(33.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 34.0,
+                vertical: 38.0,
+              ),
               child: MainButton(
-                  isWhite: false, text: 'AGREGAR EMAIL', onPressed: () {}),
+                isWhite: false,
+                text: 'AGREGAR EMAIL',
+                onPressed: () {},
+              ),
             )
           ],
         ),
-        color: Color(0xFFF4FBF9),
+        color: backgroundColor,
       ),
     );
   }

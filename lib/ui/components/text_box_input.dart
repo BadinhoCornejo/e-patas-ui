@@ -1,3 +1,4 @@
+import 'package:e_patas/ui/utils/color_theme.dart';
 import 'package:e_patas/ui/utils/typography.dart';
 import 'package:flutter/material.dart';
 
@@ -34,9 +35,7 @@ class _TextBoxInputState extends State<TextBoxInput> {
           decoration: InputDecoration(
             hintText:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            hintStyle: iOSBody(
-              Colors.black.withOpacity(0.4),
-            ),
+            hintStyle: iOSBody(neutralColor),
             counterText: _counter.toString(),
             border: UnderlineInputBorder(
               borderSide: BorderSide.none,
