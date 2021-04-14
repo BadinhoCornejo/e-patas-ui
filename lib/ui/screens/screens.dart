@@ -5,3 +5,4 @@ export 'pet_register.dart';
 export 'splash.dart';
 export 'user_register.dart';
 export 'welcome.dart';
+export 'home.dart';

@@ -28,6 +28,9 @@ RouteFactory routeFactory() => (settings) {
         case '/user_register':
           screen = UserRegister();
           break;
+        case '/home':
+          screen = Home();
+          break;
         default:
           screen = Splash();
       }
