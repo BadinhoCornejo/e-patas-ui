@@ -74,13 +74,17 @@ class _LoginState extends State<Login> {
                           MainButton(
                             isWhite: true,
                             text: "INGRESAR",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pushNamed('/home');
+                            },
                           ),
                           SizedBox(
                             height: 30.0,
                           ),
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
                             icon: Icon(
                               Dogemate.arrow_back_generic,
                               color: backgroundColor,

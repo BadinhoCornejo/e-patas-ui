@@ -113,7 +113,9 @@ class PetRegister extends StatelessWidget {
               MainButton(
                 isWhite: false,
                 text: 'AGREGAR MASCOTA',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/home');
+                },
               ),
               SizedBox(height: 38.0),
             ],

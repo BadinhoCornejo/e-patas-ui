@@ -43,18 +43,17 @@ class _ProfileCardState extends State<ProfileCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  new Text(widget.profile.name,
-                      style:
-                          new TextStyle(color: Colors.white, fontSize: 24.0)),
-                  new Text(widget.profile.bio,
-                      style: new TextStyle(color: Colors.white, fontSize: 18.0))
+                  new Text(
+                    widget.profile.name,
+                    style: new TextStyle(color: Colors.white, fontSize: 24.0),
+                  ),
+                  new Text(
+                    widget.profile.bio,
+                    style: new TextStyle(color: Colors.white, fontSize: 18.0),
+                  )
                 ],
               ),
             ),
-            new Icon(
-              Icons.info,
-              color: Colors.white,
-            )
           ],
         ),
       ),
