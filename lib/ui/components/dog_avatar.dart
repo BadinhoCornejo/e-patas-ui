@@ -17,7 +17,10 @@ class DogAvatar extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(
+          right: 8.0,
+          left: 8.0,
+        ),
         child: Column(
           children: [
             CircleAvatar(

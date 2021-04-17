@@ -23,7 +23,7 @@ class Matches extends StatelessWidget {
                   left: 13.0,
                 ),
                 child: Container(
-                  height: 125.0,
+                  height: 109,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
