@@ -31,6 +31,12 @@ RouteFactory routeFactory() => (settings) {
         case '/home':
           screen = Home();
           break;
+        case '/pet_profile':
+          screen = PetProfile();
+          break;
+        case '/matches':
+          screen = Matches();
+          break;
         default:
           screen = Splash();
       }

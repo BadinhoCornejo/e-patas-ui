@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       title: 'E-Patas',
       theme: appTheme(Platform.isAndroid),
       onGenerateRoute: routeFactory(),
-      home: Splash(),
+      home: Matches(),
     );
   }
 }

@@ -44,7 +44,7 @@ TextStyle androidBody2(Color color) => TextStyle(
       fontFamily: fontName,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.25,
-      fontSize: 14,
+      fontSize: 16,
       color: color,
     );
 

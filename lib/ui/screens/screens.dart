@@ -6,3 +6,5 @@ export 'splash.dart';
 export 'user_register.dart';
 export 'welcome.dart';
 export 'home.dart';
+export 'pet_profile.dart';
+export 'matches.dart';
